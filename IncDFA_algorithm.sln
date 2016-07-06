@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IncDFA", "IncDFA\IncDFA.fsproj", "{D3909EDB-18AD-47D8-A532-AA4D50CCED50}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "IncDFA_algorithm", "IncDFA\IncDFA_algorithm.fsproj", "{D3909EDB-18AD-47D8-A532-AA4D50CCED50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
