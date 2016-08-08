@@ -47,9 +47,9 @@ let removeState q M =
 ///adds given transition ((q1, a), q2) to automaton M. If states q1, q2
 ///or symbol a are not in the automaton, generates an ArgumentException
 let addTransition ((q1, a), q2) M =
-        if M.Q.Contains q1 && M.Q.Contains q2 && M.Σ.Contains a
-        then { M with δ = Map.add (q1, a) q2 M.δ }
-        else invalidArg "((q1, a), q2)" "The transition contains wrong elements"
+    if M.Q.Contains q1 && M.Q.Contains q2 && M.Σ.Contains a
+    then { M with δ = Map.add (q1, a) q2 M.δ }
+    else invalidArg "((q1, a), q2)" "The transition contains wrong elements"
 
 ///takes boolean flag, automaton M and string ω and adds
 ///or removes ω to\from M depends on the value of the flag
@@ -168,6 +168,7 @@ let main argv =
                                (5, 'b'), 4; ] }
     printfn "accept baba: %A" <| M.Accept ['b';'a';'b';'a']
     printfn "accept babb: %A" <| M.Accept ['b';'a';'b';'b']
+    printf "%O" M
     printfn ""
     let M1 = addString M ['b';'r';'a']
     printf "%O" M1
@@ -175,4 +176,4 @@ let main argv =
     let M2 = removeString M1 ['b';'a';'b';'a']
     printf "%O" M2
     Console.ReadLine() |> ignore
-    0 // возвращение целочисленного кода выхода
+    0
